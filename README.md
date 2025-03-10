@@ -32,7 +32,7 @@ uv run chat.py --verbose
 
 ### Contributing
 
-Message from Laurence (fork author): due to GH fork permissions I am unable to create issues. To submit issues or contributions, please feel free to fork this fork, and submit a pull request for new features or feedback. I will reply to all incoming PR's, and treat these PR's as issues if needed.
+Message from Laurence (fork author): please feel free to create issues and submit pull requests, happy to review!
 
 If needed, please feel free to email me at laurence [dot] liang [at] mail [dot] mcgill [dot] ca.
 

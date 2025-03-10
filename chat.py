@@ -29,7 +29,7 @@ def chat():
         else:
             prompt = torch.cat([prompt, input_ids[:, 1:]], dim=1)
 
-        out = generate(model, prompt, steps=steps, gen_length=gen_length, block_length=32, temperature=0., cfg_scale=0., remasking='low_confidence', verbose=True, tokenizer=tokenize)
+        out = generate(model, prompt, steps=steps, gen_length=gen_length, block_length=32, temperature=0., cfg_scale=0., remasking='low_confidence', verbose=True, tokenizer=tokenizer)
 
         answer = tokenizer.batch_decode(out[:, prompt.shape[1]:], skip_special_tokens=True)[0]
         print(f"Bot's reply: {answer}")

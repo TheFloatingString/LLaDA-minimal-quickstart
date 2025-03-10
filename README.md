@@ -4,16 +4,16 @@ A minimal quickstart forked form the original [LLaDA repository](https://github.
 
 ### Quickstart using pip
 
-Installation
 
-```
+```bash
 pip install .
-```
-
-Run quickstart demo:
-
-```
 python chat.py
+```
+
+For verbose mode:
+
+```bash
+python chat.py --verbose
 ```
 
 ### Quickstart using uv
@@ -23,6 +23,13 @@ pip install uv
 uv sync
 uv run chat.py
 ```
+
+For verbose mode:
+
+```bash
+uv run chat.py --verbose
+```
+
 
 # Large Language Diffusion Models
 [![arXiv](https://img.shields.io/badge/arXiv-2502.09992-red.svg)](https://arxiv.org/abs/2502.09992)

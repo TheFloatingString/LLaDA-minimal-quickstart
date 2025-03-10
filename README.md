@@ -1,3 +1,29 @@
+# LLaDA-quickstart-minimal
+
+A minimal quickstart forked form the original [LLaDA repository](https://github.com/ML-GSAI/LLaDA).
+
+### Quickstart using pip
+
+Installation
+
+```
+pip install .
+```
+
+Run quickstart demo:
+
+```
+python chat.py
+```
+
+### Quickstart using uv
+
+```bash
+pip install uv
+uv sync
+uv run chat.py
+```
+
 # Large Language Diffusion Models
 [![arXiv](https://img.shields.io/badge/arXiv-2502.09992-red.svg)](https://arxiv.org/abs/2502.09992)
 [![deploy](https://img.shields.io/badge/Huggingface%20-LLaDA_Base%20-FFEB3B)](https://huggingface.co/GSAI-ML/LLaDA-8B-Base)

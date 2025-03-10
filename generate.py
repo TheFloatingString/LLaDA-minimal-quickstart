@@ -42,7 +42,7 @@ def get_num_transfer_tokens(mask_index, steps):
 
 @ torch.no_grad()
 def generate(model, prompt, steps=128, gen_length=128, block_length=128, temperature=0.,
-             cfg_scale=0., remasking='low_confidence', mask_id=126336):
+             cfg_scale=0., remasking='low_confidence', mask_id=126336, verbose=False, tokenizer=None):
     '''
     Args:
         model: Mask predictor.
@@ -65,6 +65,9 @@ def generate(model, prompt, steps=128, gen_length=128, block_length=128, tempera
 
     assert steps % num_blocks == 0
     steps = steps // num_blocks
+
+    if verbose and tokenizer:
+        print(tokenizer.decode(*x))
 
     for num_block in range(num_blocks):
         block_mask_index = (x[:, prompt.shape[1] + num_block * block_length: prompt.shape[1] + (num_block + 1) * block_length:] == mask_id)
@@ -103,6 +106,9 @@ def generate(model, prompt, steps=128, gen_length=128, block_length=128, tempera
                 _, select_index = torch.topk(confidence[j], k=num_transfer_tokens[j, i])
                 transfer_index[j, select_index] = True
             x[transfer_index] = x0[transfer_index]
+            
+            if verbose and tokenizer:
+                print(tokenizer.decode(*x))
 
     return x
 

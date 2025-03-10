@@ -39,7 +39,7 @@ If needed, please feel free to email me at laurence [dot] liang [at] mail [dot] 
 Thank you!
 
 
-- *Original README.md contents below* -
+\- *Original README.md contents below* -
 
 # Large Language Diffusion Models
 [![arXiv](https://img.shields.io/badge/arXiv-2502.09992-red.svg)](https://arxiv.org/abs/2502.09992)

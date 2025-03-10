@@ -3,8 +3,10 @@ import torch
 from generate import generate
 from transformers import AutoTokenizer, AutoModel
 
+import argparse
 
-def chat():
+
+def chat(verbose:bool=False):
     device = "cuda"
     model = (
         AutoModel.from_pretrained(
@@ -50,7 +52,7 @@ def chat():
             temperature=0.0,
             cfg_scale=0.0,
             remasking="low_confidence",
-            verbose=True,
+            verbose=verbose,
             tokenizer=tokenizer,
         )
 
@@ -66,4 +68,7 @@ def chat():
 
 
 if __name__ == "__main__":
-    chat()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--verbose", "-v", action="store_true")
+    args = parser.parse_args()
+    chat(verbose=args.verbose)

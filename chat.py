@@ -6,7 +6,7 @@ from transformers import AutoTokenizer, AutoModel
 import argparse
 
 
-def chat(verbose:bool=False):
+def chat(verbose: bool = False):
     device = "cuda"
     model = (
         AutoModel.from_pretrained(

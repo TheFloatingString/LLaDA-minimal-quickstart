@@ -2,6 +2,8 @@
 
 A minimal quickstart forked form the original [LLaDA repository](https://github.com/ML-GSAI/LLaDA).
 
+Run LLaDA text diffusion and see the diffusion process using only a single line of code. 
+
 ### Quickstart using pip
 
 
@@ -38,6 +40,12 @@ If needed, please feel free to email me at laurence [dot] liang [at] mail [dot] 
 
 Thank you!
 
+
+### Differences from the Original Repository
+
+- Added verbose flag that prints out the text diffusion process
+- Keeping only essential files to keep the repository minimal
+- Formatted files with `ruff` (at some point during development)
 
 - *Original README.md contents below* -
 
